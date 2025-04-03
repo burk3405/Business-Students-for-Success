@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
+/* Apply the font globally */
+body {
+    font-family: 'Oswald', 'Arial Narrow', Impact, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    color: #1A237E; /* Dark Royal Blue */
+    background-color: #F5F5F5; /* Light background for contrast */
+	text-align: center;
+	margin: 0;
+    padding: 0;
+    padding-top: 100px; /* Push content down to avoid being hidden by navbar */
+}
+
+/* Example styling for headers */
+h1, h2, h3 {
+    font-family: 'Oswald', 'Arial Narrow', Impact, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+	text-align: center;
+    color: #0D47A1; /* A stronger royal blue */
+}
+
+
+
+/* Navigation bar styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0D47A1;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-family: 'Oswald', 'Arial Narrow', Impact, sans-serif;
+    font-weight: 700;
+    color: #FFF;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    color: #FFD700; /* Gold hover effect */
+    background-color: rgba(255, 255, 255, 0.2);
+	
+}
+
+.navbar img{
+	height: 50px;
+	background-color: white;
+	border-radius: 5px;
+	
+}
+
+
+
+/* Example button styling */
+button {
+    font-family: 'Oswald', 'Arial Narrow', Impact, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: #0D47A1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #F5F5F5; /* White */
+    border: 2px solid #FFD700; /* Gold border */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8); /* Golden glow */
+    transform: translateY(-2px); /* Slight upward movement */
+    color: #0D47A1;
+}
+	
+/* Staff directory headshots styling */
+.staff-headshot {
+    /*width: 150px;  Adjust as needed */
+    /*height: 150px;  Ensure uniform sizing */
+    border-radius: 15px; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fills the shape properly */
+}
+
+.BSFS-Logo {
+	width: 150px;  /*Adjust as needed */
+    height: 150px;  /*Ensure uniform sizing */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fills the shape properly */
+	/*transform: scale(1.5); */
+	
+}
+
+.instagram-button {
+    display: inline-block;
+    background-color: #E4405F;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.instagram-button:hover {
+    background-color: #C13584;
+}
+
+
+.flyer {
+	width: 100%;
+	max-width: 250px; /* Prevents it from getting too large */
+    height: auto; /* Maintains aspect ratio */
+	align: center;
+}
+
+
+
+/* Slideshow Container */
+.slideshow-container {
+    width: 600px; /* Adjust as needed */
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px; /* Optional rounded corners */
+	margin: 0 auto;
+	display: block;
+}
+
+/* Slide Wrapper */
+.slides {
+    display: flex;
+    width: 300%; /* 100% * number of images */
+    animation: slideAnimation 90s infinite;
+}
+
+/* Each Image */
+.slides img {
+    width: 100%;
+    flex: 1;
+}
+
+/* Keyframes for Sliding Effect */
+@keyframes slideAnimation {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+}
+
+.eboard-container {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the items in the row */
+    align-items: flex-start; /* Aligns to the top */
+    gap: 20px; /* Adds space between items */
+    max-width: 1000px; /* Ensures items don’t stretch too wide */
+    margin: auto; /* Centers the container */
+    padding: 20px;
+	flex-wrap: wrap;
+}
+
+.president {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 300px; /* Prevents items from being too large */
+    min-width: 200px; /* Ensures responsiveness */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensures width calculations include padding */
+}
+
+.president img {
+    width: 100px; /* Adjust for headshot size */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.president h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+.president p {
+    margin: 3px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.president a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.president a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .president {
+        flex: 1 1 calc(50% - 40px); /* Two per row on smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .president {
+        flex: 1 1 100%; /* Full width on very small screens */
+    }
+}
+
+details {
+    display: inline-block;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+summary {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
+
+summary:hover {
+    background-color: #0056b3;
+}
+
+details[open] summary {
+    display: none; /* Hides the button after clicking */
+}
